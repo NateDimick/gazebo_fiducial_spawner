@@ -1,0 +1,13 @@
+material arucotag
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture arucotag.png
+      }
+    }
+  }
+}
