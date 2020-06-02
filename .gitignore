@@ -1,3 +1,4 @@
 *.png
 .vscode*
 *arucotag[1234567890].*
+*.pyc

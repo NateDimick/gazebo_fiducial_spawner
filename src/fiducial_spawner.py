@@ -87,6 +87,7 @@ def spawn_cb(msg):
         except:
             rospy.logerr("could not spawn fiducial. Is gazebo running?")
 
-rospy.init_node("fid_spawner")
-spawner_sub = rospy.Subscriber("/new_fid_models", FiducialModel, spawn_cb)
-rospy.spin()
+if __name__ == '__main__':
+    rospy.init_node("fid_spawner")
+    spawner_sub = rospy.Subscriber("/new_fid_models", FiducialModel, spawn_cb)
+    rospy.spin()
