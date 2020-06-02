@@ -14,9 +14,8 @@ if __name__ == '__main__':
     parser.add_argument("-R", help="Roll component of tag orientation (radians)", type=float)
     parser.add_argument("-P", help="Pitch component of tag orientation (radians)", type=float)
     parser.add_argument("-Y", help="Yaw component of tag orientation (radians)", type=float)
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
 
-    print(args.id, args.size)
     new_model(args.id, args.dict if args.dict else 7, args.size if args.size else 0)
 
     command = "rosrun gazebo_ros spawn_model -file {} -sdf -model arucotag{} ".format(get_nearby_file("../models/arucotag{0}/arucotag{0}.sdf".format(args.id)), args.id)
