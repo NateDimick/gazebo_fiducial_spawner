@@ -23,6 +23,7 @@ def new_model(fid_id, fid_dict, size=0):
     # create correct fid tag picture
     aruco_dict = cv2.aruco.Dictionary_get(fid_dict)
     img = cv2.aruco.drawMarker(aruco_dict, fid_id, 2000)
+    img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
     cv2.imwrite(get_nearby_file("../models/arucotag{0}/arucotag{0}.png".format(fid_id)), img)
     # make changes to sdf file
     with open(get_nearby_file("../models/arucotag{}/arucotag.sdf".format(fid_id)), 'r+') as sdf:
