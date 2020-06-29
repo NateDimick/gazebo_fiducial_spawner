@@ -23,3 +23,6 @@ A script to spawn a single fiducial. Use `rosrun gazebo_fiducial_spawner single_
 * `-x`, `-y` and `-z` all floats which represent components of the model's desired location in the simulation. Unit is meters.
 * `-R`, `-P` and `-Y` all floats as well which represent components of the model's orientation in the simulation, **r**oll, **p**itch and **y**aw. Units in radians. NB that y-axis position is lowercase and Yaw rotation is uppercase.
 
+## multi_spawn_script.py
+
+an example included to show a way to spawn a specific set of fiducials using the fiducial_spawner.py, without calling single_spawner.py or using `rostopic pub` n times. 
