@@ -1,13 +1,13 @@
-material arucotag
-{
+material arucotag{0}
+[
   technique
-  {
+  [
     pass
-    {
+    [
       texture_unit
-      {
-        texture arucotag.png
-      }
-    }
-  }
-}
+      [
+        texture arucotag{0}.png
+      ]
+    ]
+  ]
+]

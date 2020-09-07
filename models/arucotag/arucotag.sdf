@@ -1,5 +1,5 @@
 <sdf version='1.5'>
-  <model name='arucotag'>
+  <model name='arucotag{0}'>
     <link name='tag'>
       <pose frame=''>0 0 0.01 0 -0 0</pose>
       <inertial>
@@ -18,13 +18,13 @@
         <pose frame=''>0 0 0.01 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.15 0.15 0.0001</size>
+            <size>{1} {1} 0.0001</size>
           </box>
         </geometry>
         <material>
         <script>
-           <uri>file://models/arucotag/arucotag.material</uri>
-           <name>arucotag</name>
+           <uri>file://models/arucotag{0}/arucotag{0}.material</uri>
+           <name>arucotag{0}</name>
          </script>
         </material>
       </visual>
